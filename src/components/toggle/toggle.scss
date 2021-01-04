@@ -1,0 +1,59 @@
+.toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+input[type="checkbox"].checkbox {
+  appearance: none;
+  position: relative;
+  vertical-align: 2px;
+  outline: none;
+  border-radius: 5px;
+  width: 40px;
+  height: 10px;
+  background: #555;
+  cursor: pointer;
+}
+
+input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
+}
+
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px #ffff;
+}
+
+input[type="checkbox"].checkbox + label {
+  position: absolute;
+  left: 2px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  background-color: #8cf5f9;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.toggleContainer {
+  display: flex;
+  margin: 0 auto;
+}
+
+.toggleContainer > span {
+  margin-top: 4px;
+  margin-right: 2px;
+  border: none;
+  font-size: 1.2em;
+  background: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.toggleContainer > span:last-child {
+  margin-top: 5px;
+}

@@ -14,6 +14,7 @@
     }
   },
   "rules": {
+    "quotes": [2, "double"]
     // Aca puedes modificar alguna regla específica, por ejemplo:
     // "@typescript-eslint/explicit-function-return-type": "off",
   },
