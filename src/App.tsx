@@ -1,8 +1,7 @@
 import React, { useEffect } from "react"
 import { Toggle } from "./components/toggle/Toggle"
 import useTheme from "./utils/hooks/useTheme"
-
-import "./App.css"
+import "./app.scss"
 
 const App: React.FC = () => {
   const { dark } = useTheme()
@@ -10,7 +9,7 @@ const App: React.FC = () => {
     localStorage.setItem("dark", JSON.stringify(dark))
   }, [dark])
   return (
-    <div className="App">
+    <div className={dark ? "app darkMode" : "app lightMode"}>
       <Toggle />
     </div>
   )

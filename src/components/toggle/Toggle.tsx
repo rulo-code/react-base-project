@@ -1,6 +1,6 @@
 import React from "react"
 import useTheme from "../../utils/hooks/useTheme"
-
+import Huevo from "../../assets/huevo.png"
 import "./toggle.scss"
 
 export const Toggle: React.FC = () => {
@@ -16,7 +16,9 @@ export const Toggle: React.FC = () => {
           id="checkbox"
           checked={dark}
         />
-        <label htmlFor="checkbox"></label>
+        <label htmlFor="checkbox">
+          <img className="egg" src={Huevo} alt="huevbo" />
+        </label>
       </span>
     </div>
   )
