@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
-import { Toggle } from "./components/toggle/Toggle"
+import { Toggle } from "./components/toggle/atoms/Toggle/Toggle"
 import useTheme from "./utils/hooks/useTheme"
-import "./app.scss"
+import "./styles/app.scss"
 
 const App: React.FC = () => {
   const { dark } = useTheme()

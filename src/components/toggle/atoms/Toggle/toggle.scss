@@ -1,3 +1,5 @@
+@import "../../../../styles/index.scss";
+
 .toggle {
   position: relative;
   display: flex;
@@ -13,13 +15,13 @@ input[type="checkbox"].checkbox {
   border-radius: 1rem;
   width: 86px;
   height: 40px;
-  background: #ccc;
+  background: $colorPrimaryGrey;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 input[type="checkbox"].checkbox:checked {
-  background: #3fc657;
+  background: $colorPrimaryGreen;
 }
 
 input[type="checkbox"].checkbox:checked + label {
@@ -33,10 +35,6 @@ input[type="checkbox"].checkbox:checked + label {
     opacity: 1;
     transform: rotate(180deg), translateX(3px);
   }
-}
-
-input[type="checkbox"].checkbox:focus-visible {
-  outline: solid 2px #ffff;
 }
 
 input[type="checkbox"].checkbox + label {

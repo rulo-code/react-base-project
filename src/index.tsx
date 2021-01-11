@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import ThemeProvider from "./context/ThemeContext"
+import "./styles/index.scss"
 
 import App from "./App"
 
@@ -10,5 +11,5 @@ ReactDOM.render(
       <App />
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById("root"),
+  document.getElementById("app"),
 )

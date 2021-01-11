@@ -1,0 +1,28 @@
+@import "./foundations/colors.scss";
+
+// body {
+//   background-color: $colorBgMain;
+// }
+body,
+html,
+#app,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: $colorPrimaryDark;
+}
+
+.lightMode {
+  height: 100%;
+  background: $colorPrimaryLight;
+}
+
+.darkMode {
+  height: 100%;
+  background: $colorPrimaryDark;
+}
