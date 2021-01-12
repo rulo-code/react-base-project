@@ -1,0 +1,17 @@
+$spacingUnit: 10px;
+
+@function getspacing($times) {
+  @return $spacingUnit * $times;
+}
+
+@mixin flex($direction: rows, $horizontal: center, $vertical: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $vertical;
+  justify-content: $horizontal;
+}
+
+@mixin paddingAndMargin($multiPadding: 1, $multiMarging: 1) {
+  margin: $sskSpacingUnit * $multiPadding;
+  padding: $sskSpacingUnit * $multiMarging;
+}

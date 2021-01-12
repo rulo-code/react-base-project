@@ -13,8 +13,8 @@ input[type="checkbox"].checkbox {
   vertical-align: 2px;
   outline: none;
   border-radius: 1rem;
-  width: 86px;
-  height: 40px;
+  width: getspacing(8.6);
+  height: getspacing(4);
   background: $colorPrimaryGrey;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -25,7 +25,7 @@ input[type="checkbox"].checkbox:checked {
 }
 
 input[type="checkbox"].checkbox:checked + label {
-  left: 55px;
+  left: getspacing(5.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,14 +39,14 @@ input[type="checkbox"].checkbox:checked + label {
 
 input[type="checkbox"].checkbox + label {
   position: absolute;
-  left: 14px;
+  left: getspacing(1.4);
   top: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: getspacing(3.6);
+  height: getspacing(3.6);
   opacity: 0.9;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -65,6 +65,7 @@ input[type="checkbox"].checkbox + label {
 }
 
 .toggleContainer > span {
+  margin-top: getspacing(2.4);
   font-size: 1.2em;
   transition: color 0.3s ease;
   cursor: pointer;
