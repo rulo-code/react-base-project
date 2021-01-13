@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
-import { Toggle } from "./components/toggle/atoms/Toggle/Toggle"
+import { Toggle } from "./components/atoms/Toggle/Toggle"
 import useTheme from "./utils/hooks/useTheme"
+import CharactersList from "./components/organism/CharactersList/CharacterList"
 import "./styles/app.scss"
 
 const App: React.FC = () => {
@@ -11,6 +12,7 @@ const App: React.FC = () => {
   return (
     <div className={dark ? "app darkMode" : "app lightMode"}>
       <Toggle />
+      <CharactersList />
     </div>
   )
 }

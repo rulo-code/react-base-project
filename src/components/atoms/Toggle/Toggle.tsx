@@ -1,6 +1,6 @@
 import React from "react"
-import useTheme from "../../../../utils/hooks/useTheme"
-import Huevo from "../../../../assets/huevo.png"
+import useTheme from "../../../utils/hooks/useTheme"
+import Huevo from "../../../assets/huevo.png"
 import "./toggle.scss"
 
 export const Toggle: React.FC = () => {

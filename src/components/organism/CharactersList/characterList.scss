@@ -1,0 +1,7 @@
+@import "../../../styles/index.scss";
+
+.characterList {
+  @include flex(column);
+
+  height: 100%;
+}
