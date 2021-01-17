@@ -6,5 +6,12 @@ export interface ICharter {
   status: string
   created: string
   species: string
+  location: ILocation
+  url: string
+  episode: string[]
+}
+
+interface ILocation {
+  name: string
   url: string
 }

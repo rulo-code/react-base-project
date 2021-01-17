@@ -4,6 +4,7 @@ import Character from "../../molecules/Character/Character"
 import { ICharter } from "../../molecules/Character/Charcter.types"
 import { ICharacters } from "./characters.types"
 import { getData } from "../../../utils/getData"
+import HeaderLogo from "../../../assets/rick-and-morty-logo.png"
 import "./characterList.scss"
 
 const CharacterList: React.FC = () => {
@@ -17,6 +18,9 @@ const CharacterList: React.FC = () => {
   }, [])
   return (
     <div className="characterList">
+      <div className="characterList-header">
+        <img src={HeaderLogo} alt="Heaaderlogo" />
+      </div>
       {characters &&
         characters.results.map((charter: ICharter) => (
           <Character character={charter} key={charter.id} />

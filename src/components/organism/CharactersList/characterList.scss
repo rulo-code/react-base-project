@@ -1,7 +1,12 @@
 @import "../../../styles/index.scss";
 
 .characterList {
-  @include flex(column);
+  @include flex(column, flex-start);
 
   height: 100%;
+
+  &-header {
+    padding-top: getspacing(1.5);
+    padding-bottom: getspacing(2.8);
+  }
 }
