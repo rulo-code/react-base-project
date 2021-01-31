@@ -1,0 +1,65 @@
+@import "../../../styles/index.scss";
+
+.character {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  overflow: hidden;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  box-shadow: 4px 4px 5px 0 rgba(235, 230, 239, 1);
+  transition: 0.3s;
+  cursor: pointer;
+
+  .photocontainer {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 19px;
+
+    &-title {
+      font-size: 24px;
+    }
+
+    &-statusAndSpecie {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 12px;
+    }
+
+    &-lastKnowLocation {
+      padding-bottom: 10px;
+
+      &-title {
+        color: $colorSecondaryGrey;
+      }
+
+      &-value {
+        color: $colorPrimaryDark;
+      }
+    }
+
+    &-episodes {
+      color: $colorSecondaryGrey;
+    }
+  }
+}
+
+.character:hover {
+  transform: scale(1.03);
+}
+
+.character.dark {
+  box-shadow: 4px 4px 5px 0 rgba(85, 195, 66, 1);
+}
