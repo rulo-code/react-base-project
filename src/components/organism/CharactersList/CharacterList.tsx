@@ -21,7 +21,7 @@ const CharacterList: React.FC = () => {
     })
   }, [])
   return (
-    <div className="characterList">
+    <div className="characterLis
       <div className="characterList-header">
         <img src={!dark ? HeaderLogo : HeaderLogo2} alt="Heaaderlogo" />
       </div>
