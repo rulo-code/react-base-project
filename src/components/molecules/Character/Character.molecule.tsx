@@ -3,9 +3,8 @@ import { ICharter } from "./Charcter.types"
 import AliveLogo from "../../../assets/heart1.svg"
 import DeadLogo from "../../../assets/heart2.svg"
 import useTheme from "../../../utils/hooks/useTheme"
-import "./character.scss"
+import "./character.molecule.scss"
 
-import "./character.scss"
 interface IProps {
   character: ICharter
 }

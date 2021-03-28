@@ -1,13 +1,13 @@
-@import "../../../styles/index.scss";
+@import '../../../styles/index.scss';
 
 .character {
   display: grid;
   grid-template-columns: 30% 1fr;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: getspacing(1.6);
   width: 100%;
-  height: 100%;
-  box-shadow: 4px 4px 5px 0 rgba(235, 230, 239, 1);
+  height: getspacing(18);
+  box-shadow: var(--shadow-1);
   transition: 0.3s;
   cursor: pointer;
 
@@ -23,31 +23,29 @@
   }
 
   .info {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 19px;
+    padding-top: getspacing(1);
+    padding-bottom: getspacing(1);
+    padding-left: getspacing(1.9);
 
     &-title {
-      font-size: 24px;
+      font-size: getspacing(2.4);
     }
 
     &-statusAndSpecie {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 12px;
+      @include flex('',flex-start);
+      margin-bottom: getspacing(1.2)
     }
 
     &-lastKnowLocation {
-      padding-bottom: 10px;
+      padding-bottom: getspacing(1)
 
       &-title {
-        color: $colorSecondaryGrey;
+        color: var(--color-primary-grey);
       }
     }
 
     &-episodes h4 {
-      color: $colorSecondaryGrey;
+      color: var(--color-primary-grey);
     }
   }
 }
@@ -57,5 +55,5 @@
 }
 
 .character.dark {
-  box-shadow: 4px 4px 5px 0 rgba(85, 195, 66, 1);
+  box-shadow: var(--shadow-1);
 }

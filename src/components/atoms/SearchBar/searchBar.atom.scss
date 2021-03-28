@@ -1,0 +1,22 @@
+@import '../../../styles/index.scss';
+
+.searchBarContainer {
+  border: var(--color-secundary-grey) solid 1px;
+  border-radius: getspacing(1.6);
+  padding: getspacing(1.6);
+  background: var(--color-primary-light);
+  i {
+    color: var(--color-primary-dark)
+  }
+
+}
+.searchBar {
+  
+  background: none;
+  border: none;
+  outline: none;
+  position: relative;
+  padding-left: getspacing(1) ;
+  height: 100%;
+}
+

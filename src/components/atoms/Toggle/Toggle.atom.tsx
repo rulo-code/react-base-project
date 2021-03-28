@@ -1,7 +1,7 @@
 import React from "react"
 import useTheme from "../../../utils/hooks/useTheme"
 import Huevo from "../../../assets/huevo.png"
-import "./toggle.scss"
+import "./toggle.atom.scss"
 
 export const Toggle: React.FC = () => {
   const { setDark, dark } = useTheme()

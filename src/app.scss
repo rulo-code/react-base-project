@@ -1,0 +1,28 @@
+@import './styles/colors.scss';
+
+body,
+html,
+#app,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  overflow-x: hidden;
+  width: 100%;
+  font-family: sans-serif;
+  color: var(--color-primary-dark);
+  transition: all 0.3s ease;
+}
+.lightMode {
+  height: 100%;
+  background: var(--color-primary-light);
+}
+
+.darkMode {
+  height: 100%;
+  color: var(--color-primary-light);
+  background: var(--color-primary-dark);
+}

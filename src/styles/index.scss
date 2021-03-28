@@ -1,25 +1,5 @@
-@import "./foundations/colors.scss";
-@import "./foundations/spacing.scss";
+@import "./spacing.scss";
 
-// body {
-//   background-color: $colorBgMain;
-// }
-body,
-html,
-#app,
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.lightMode {
-  height: 100%;
-  background: $colorPrimaryLight;
-}
 
-.darkMode {
-  height: 100%;
-  color: $colorPrimaryLight;
-  background: $colorPrimaryDark;
-}
+

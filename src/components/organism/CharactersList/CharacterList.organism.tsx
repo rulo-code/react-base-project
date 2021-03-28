@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react"
-import Character from "../../molecules/Character/Character"
-import useTheme from "../../../utils/hooks/useTheme"
+import Character from "../../molecules/Character/Character.molecule"
+import { SearchBar } from "../../atoms/SearchBar/SearchBar.atom"
 import config from "../../../utils/config"
 import Skeleton from "../../atoms/Skeleton/Skeleton"
 import { ICharacters } from "./characters.types"
 import { ICharter } from "../../molecules/Character/Charcter.types"
 import { getData } from "../../../utils/getData"
-import HeaderLogo from "../../../assets/rick-and-morty-logo.png"
-import HeaderLogo2 from "../../../assets/rick-and-morty-logo-2.png"
-import "./characterList.scss"
+
+import "./characterList.organism.scss"
 
 const CharacterList: React.FC = () => {
   const [loading, setLoading] = useState(true)
@@ -27,7 +26,6 @@ const CharacterList: React.FC = () => {
   const handleSearchFieldChange = (event: any) => {
     setSearchField(event.target.value)
   }
-  const { dark } = useTheme()
 
   useEffect(() => {
     ;(async function () {
@@ -46,20 +44,7 @@ const CharacterList: React.FC = () => {
 
   return (
     <div className="characterList">
-      {/* TODO: descomponer */}
-      <div className="characterList-header">
-        <img src={!dark ? HeaderLogo : HeaderLogo2} alt="Heaaderlogo" />
-      </div>
-      {/* TODO: descomponer */}
-      <input
-        onChange={handleSearchFieldChange}
-        value={searchField}
-        type="search"
-        placeholder="Buscar personaje"
-      />
-      {/* TODO: descomponer */}
-      {/* TODO: useMemo in filter results */}
-
+      <SearchBar fieldValue={searchField} onChange={handleSearchFieldChange} />
       <div className="characterList-container">
         {loading && !error
           ? new Array(10).fill(1).map((_, i) => {
@@ -69,7 +54,7 @@ const CharacterList: React.FC = () => {
               <Character character={charter} key={charter.id} />
             ))}
       </div>
-      {error && <p>Error al obtener datos: {error}</p>}
+      {!loading && filteredCharacters.length === 0 && <p>Personaje no encontrado</p>}
     </div>
   )
 }

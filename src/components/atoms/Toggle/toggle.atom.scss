@@ -1,4 +1,4 @@
-@import "../../../styles/index";
+@import '../../../styles/index.scss';
 
 .toggle {
   position: relative;
@@ -13,15 +13,16 @@ input[type="checkbox"].checkbox {
   vertical-align: 2px;
   outline: none;
   border-radius: 1rem;
+
   width: getspacing(8.6);
   height: getspacing(4);
-  background: $colorPrimaryGrey;
+  background: var(--color-primary-grey);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 input[type="checkbox"].checkbox:checked {
-  background: $colorPrimaryGreen;
+  background: var(--color-primary-green);
 }
 
 input[type="checkbox"].checkbox:checked + label {
@@ -45,6 +46,7 @@ input[type="checkbox"].checkbox + label {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+
   width: getspacing(3.6);
   height: getspacing(3.6);
   opacity: 0.9;
@@ -58,10 +60,19 @@ input[type="checkbox"].checkbox + label {
 }
 
 .toggleContainer {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  transform: scale(.4);
+  top:getspacing(5.5);
+
+  @media (min-width: 768px) {
+    right: 5%;
+    top: 15%;
+    transform: scale(.7);
+  }
+  
 }
 
 .toggleContainer > span {
@@ -70,3 +81,4 @@ input[type="checkbox"].checkbox + label {
   transition: color 0.3s ease;
   cursor: pointer;
 }
+

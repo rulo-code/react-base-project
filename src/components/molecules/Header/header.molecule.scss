@@ -1,0 +1,30 @@
+@import '../../../styles/index.scss';
+
+.header {
+  @include flex;
+  padding: getspacing(1) 0;
+  transition: 1s;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--color-primary-dark) ;
+  box-shadow: var(--shadow-2);
+  &-logo {
+    background: none;
+    border: none;
+    outline: none;
+    :focus {
+      outline: none;
+    }
+    img {
+      width: 100% ;
+      transform: translateX(16px);
+      cursor: pointer;
+    }
+   
+
+  }
+}
