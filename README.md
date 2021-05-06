@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was maked with love
+This project was maked with love.
 
 ## Available Scripts
 
